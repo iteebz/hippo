@@ -1,53 +1,57 @@
 # 🧠 Mnemos
 
-**Memory for Agentic AI. Inspired by the brain. Built for the future.**
+**Memory for Agentic AI. Inspired by minds. Engineered for longevity.**
 
 Mnemos is a lightweight, extensible memory system for agentic AI.  
-It helps agents **remember what matters**—not just store data.
+It helps agents **remember what matters** — not just store data.
 
 ## ✨ What is Mnemos?
 
-Mnemos is a memory-as-a-service toolkit that enables developers to add persistent, structured, and salience-aware memory to AI agents and LLM apps.
+Mnemos is a memory-as-a-service toolkit that enables developers to add persistent, structured, and coherent memory to AI agents and LLM apps.
 
 Think of it like a hippocampus for your agents:
-- Clean API for memory ingestion and recall
-- Supports session, semantic, and artifact-level memory
-- Optimized for context relevance, traceability, and long-term coherence
-- Built on familiar tools like Postgres and pgvector
-- Designed for composability and open-source contribution
+- Clean API for memory storage and recall
+- Optimized for simplicity and developer experience
+- Designed for extensibility with pluggable storage backends
 
 ## 🧪 Example Usage
 
 ```python
 import mnemos
 
-# Ingest a memory (e.g., from a chat session or document)
-mnemos.ingest(session_id="abc123", content="The user prefers minimalist interfaces.")
+# Store a memory
+mnemos.remember("The user prefers minimalist interfaces.", tags=["ui", "preference"])
 
-# Recall relevant memories
-results = mnemos.recall(query="What does the user like?")
-print(results)
+# Recall related memories
+results = mnemos.recall("user interface")
+print(results[0].text)  # "The user prefers minimalist interfaces."
 ```
 
 ## 🧱 Key Features
-- 🧠 Structured memory: episodic, semantic, and artifact tiers
-- 🔍 Vector search + SQL filtering via Supabase/Postgres
-- 🧰 Opinionated defaults, extensible for custom agents
-- 🔄 Daemon-ready for consolidation and pruning cycles
-- 🧾 Traceable & versioned memory objects for auditability
+- 🧠 Simple, intuitive API with `remember()` and `recall()`
+- 🔍 Basic text and tag-based search
+- 🧪 Fully typed with Python type hints
+- 🧰 Extensible storage backends (in-memory included)
 
 ## 📦 Installation
 
-Coming soon via PyPI:
+Install with pip:
+
 ```bash
 pip install mnemos
 ```
 
+## 🧪 Running Tests
+
+```bash
+pytest tests/
+```
+
 ## 🌱 Project Status
 
-Mnemos is in early development. Contributions, ideas, and feedback are welcome.
+Mnemos is in early development. This initial version provides an in-memory implementation with a clean API. Future versions will add persistent storage and more advanced search capabilities.
 
-We’re building in the open: github.com/iteebz/mnemos
+Contributions, ideas, and feedback are welcome at [github.com/iteebz/mnemos](https://github.com/iteebz/mnemos)
 
 ## 📜 License
 

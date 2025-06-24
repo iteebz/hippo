@@ -1,37 +1,27 @@
 # 🧠 Mnemos
 
-**Memory for Agentic AI. Inspired by minds. Engineered for longevity.**
+A minimal, extensible memory layer for agentic AI.
 
-Mnemos is a lightweight, extensible memory system for agentic AI.  
-It helps agents **remember what matters** — not just store data.
+[![PyPI version](https://badge.fury.io/py/mnemos.svg)](https://badge.fury.io/py/mnemos)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
-## ✨ What is Mnemos?
+## 🚀 Features
 
-Mnemos is a memory-as-a-service toolkit that enables developers to add persistent, structured, and coherent memory to AI agents and LLM apps.
+- 🧠 `remember()`, `recall()` - simple, intuitive API
+- 🏷️ Tag + keyword search
+- 🧩 Pluggable storage backends (in-memory included)
+- 🧪 Fully typed and test-covered
 
-Think of it like a hippocampus for your agents:
-- Clean API for memory storage and recall
-- Optimized for simplicity and developer experience
-- Designed for extensibility with pluggable storage backends
-
-## 🧪 Example Usage
+## 🛠️ Usage
 
 ```python
-import mnemos
+from mnemos import remember, recall
 
-# Store a memory
-mnemos.remember("The user prefers minimalist interfaces.", tags=["ui", "preference"])
+remember("Memory is all you need.", tags=["mnemos", "focus"])
 
-# Recall related memories
-results = mnemos.recall("user interface")
-print(results[0].text)  # "The user prefers minimalist interfaces."
+results = recall("memory")
+print(results[0].text)  # "Memory is all you need."
 ```
-
-## 🧱 Key Features
-- 🧠 Simple, intuitive API with `remember()` and `recall()`
-- 🔍 Basic text and tag-based search
-- 🧪 Fully typed with Python type hints
-- 🧰 Extensible storage backends (in-memory included)
 
 ## 📦 Installation
 
@@ -41,13 +31,13 @@ Install with pip:
 pip install mnemos
 ```
 
-## 🧪 Running Tests
+## 🧪 Testing
 
 ```bash
 pytest tests/
 ```
 
-## 🌱 Project Status
+## 🌱 Status
 
 Mnemos is in early development. This initial version provides an in-memory implementation with a clean API. Future versions will add persistent storage and more advanced search capabilities.
 
@@ -55,4 +45,4 @@ Contributions, ideas, and feedback are welcome at [github.com/iteebz/mnemos](htt
 
 ## 📜 License
 
-MIT
+[MIT](./LICENSE)

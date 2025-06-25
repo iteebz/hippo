@@ -3,7 +3,7 @@ name = "mnemos"
 version = "0.1.1"
 description = "Memory for agentic AI. Inspired by the brain. Built for the future."
 authors = [
-    {name = "Tyson Chan", email = "tyson.chan@proton.me"}
+    {name = "Tyson Chan", email = "itsteebz@gmail.com"}
 ]
 license = {text = "MIT"}
 readme = "README.md"
